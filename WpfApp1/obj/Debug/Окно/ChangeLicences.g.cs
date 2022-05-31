@@ -43,7 +43,7 @@ namespace WpfApp1.Окно {
         
         #line 11 "..\..\..\Окно\ChangeLicences.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.DatePicker date_get;
+        internal System.Windows.Controls.TextBox txtName;
         
         #line default
         #line hidden
@@ -51,7 +51,7 @@ namespace WpfApp1.Окно {
         
         #line 15 "..\..\..\Окно\ChangeLicences.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.DatePicker date_expire;
+        internal System.Windows.Controls.TextBox txtSurname;
         
         #line default
         #line hidden
@@ -59,7 +59,7 @@ namespace WpfApp1.Окно {
         
         #line 18 "..\..\..\Окно\ChangeLicences.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.ComboBox cmbcat;
+        internal System.Windows.Controls.TextBox txtmidlname;
         
         #line default
         #line hidden
@@ -83,13 +83,69 @@ namespace WpfApp1.Окно {
         
         #line 27 "..\..\..\Окно\ChangeLicences.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-        internal System.Windows.Controls.ComboBox cmbDriver;
+        internal System.Windows.Controls.TextBox txtPostcode;
         
         #line default
         #line hidden
         
         
-        #line 28 "..\..\..\Окно\ChangeLicences.xaml"
+        #line 30 "..\..\..\Окно\ChangeLicences.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.ComboBox cmbRegion;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 33 "..\..\..\Окно\ChangeLicences.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.TextBox txtaddress;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 36 "..\..\..\Окно\ChangeLicences.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.TextBox txtWork;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 39 "..\..\..\Окно\ChangeLicences.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.TextBox txtJobname;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 42 "..\..\..\Окно\ChangeLicences.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.TextBox txtPhone;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 46 "..\..\..\Окно\ChangeLicences.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.TextBox txtEmail;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 49 "..\..\..\Окно\ChangeLicences.xaml"
+        [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+        internal System.Windows.Controls.Image imgphoto;
+        
+        #line default
+        #line hidden
+        
+        
+        #line 50 "..\..\..\Окно\ChangeLicences.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button SaveChange;
         
@@ -127,16 +183,28 @@ namespace WpfApp1.Окно {
             switch (connectionId)
             {
             case 1:
-            this.date_get = ((System.Windows.Controls.DatePicker)(target));
+            this.txtName = ((System.Windows.Controls.TextBox)(target));
+            
+            #line 11 "..\..\..\Окно\ChangeLicences.xaml"
+            this.txtName.PreviewTextInput += new System.Windows.Input.TextCompositionEventHandler(this.txtName_PreviewTextInput);
+            
+            #line default
+            #line hidden
             return;
             case 2:
-            this.date_expire = ((System.Windows.Controls.DatePicker)(target));
+            this.txtSurname = ((System.Windows.Controls.TextBox)(target));
+            
+            #line 15 "..\..\..\Окно\ChangeLicences.xaml"
+            this.txtSurname.PreviewTextInput += new System.Windows.Input.TextCompositionEventHandler(this.txtSurname_PreviewTextInput);
+            
+            #line default
+            #line hidden
             return;
             case 3:
-            this.cmbcat = ((System.Windows.Controls.ComboBox)(target));
+            this.txtmidlname = ((System.Windows.Controls.TextBox)(target));
             
             #line 18 "..\..\..\Окно\ChangeLicences.xaml"
-            this.cmbcat.PreviewTextInput += new System.Windows.Input.TextCompositionEventHandler(this.txtmidlname_PreviewTextInput);
+            this.txtmidlname.PreviewTextInput += new System.Windows.Input.TextCompositionEventHandler(this.txtmidlname_PreviewTextInput);
             
             #line default
             #line hidden
@@ -160,18 +228,45 @@ namespace WpfApp1.Окно {
             #line hidden
             return;
             case 6:
-            this.cmbDriver = ((System.Windows.Controls.ComboBox)(target));
+            this.txtPostcode = ((System.Windows.Controls.TextBox)(target));
             
             #line 27 "..\..\..\Окно\ChangeLicences.xaml"
-            this.cmbDriver.PreviewTextInput += new System.Windows.Input.TextCompositionEventHandler(this.txtPostcode_PreviewTextInput);
+            this.txtPostcode.PreviewTextInput += new System.Windows.Input.TextCompositionEventHandler(this.txtPostcode_PreviewTextInput);
             
             #line default
             #line hidden
             return;
             case 7:
+            this.cmbRegion = ((System.Windows.Controls.ComboBox)(target));
+            return;
+            case 8:
+            this.txtaddress = ((System.Windows.Controls.TextBox)(target));
+            return;
+            case 9:
+            this.txtWork = ((System.Windows.Controls.TextBox)(target));
+            return;
+            case 10:
+            this.txtJobname = ((System.Windows.Controls.TextBox)(target));
+            return;
+            case 11:
+            this.txtPhone = ((System.Windows.Controls.TextBox)(target));
+            
+            #line 42 "..\..\..\Окно\ChangeLicences.xaml"
+            this.txtPhone.PreviewTextInput += new System.Windows.Input.TextCompositionEventHandler(this.txtPhone_PreviewTextInput);
+            
+            #line default
+            #line hidden
+            return;
+            case 12:
+            this.txtEmail = ((System.Windows.Controls.TextBox)(target));
+            return;
+            case 13:
+            this.imgphoto = ((System.Windows.Controls.Image)(target));
+            return;
+            case 14:
             this.SaveChange = ((System.Windows.Controls.Button)(target));
             
-            #line 28 "..\..\..\Окно\ChangeLicences.xaml"
+            #line 50 "..\..\..\Окно\ChangeLicences.xaml"
             this.SaveChange.Click += new System.Windows.RoutedEventHandler(this.SaveChange_Click);
             
             #line default

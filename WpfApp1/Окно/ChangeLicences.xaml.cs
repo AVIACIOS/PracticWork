@@ -23,5 +23,10 @@ namespace WpfApp1.Окно
         {
             InitializeComponent();
         }
+
+        private void SaveChange_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
