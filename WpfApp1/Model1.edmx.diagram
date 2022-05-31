@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="e1d89b814e3b46f48eb105d98a355989" Name="Diagram1">
+        <EntityTypeShape EntityType="Model.Categorios" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Drivers" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Fines" Width="1.5" PointX="5.25" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.licences" Width="1.5" PointX="5.25" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Region" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Status" Width="1.5" PointX="7.75" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.sysdiagrams" Width="1.5" PointX="8.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Type_of_drive" Width="1.5" PointX="6" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Types_of_engine" Width="1.5" PointX="6" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.Users" Width="1.5" PointX="10" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.vehides" Width="1.5" PointX="8.25" PointY="4.375" IsExpanded="true" />
+        <AssociationConnector Association="Model.FK_licences_Categorios" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Drivers_Region" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Fines_Drivers" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_licences_Drivers" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_vehides_Drivers" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_Users_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_vehides_Type_of_drive" ManuallyRouted="false" />
+        <AssociationConnector Association="Model.FK_vehides_Types_of_engine" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

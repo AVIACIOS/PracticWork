@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Categorios">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="categorios_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="description" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="licences" Relationship="Self.FK_licences_Categorios" FromRole="Categorios" ToRole="licences" />
+  </EntityType>
+  <EntityType Name="Drivers">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="firstname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="lastname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="middlename" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="passport_serial" Type="Int32" />
+    <Property Name="passport_number" Type="Int32" />
+    <Property Name="postcode" Type="Int32" />
+    <Property Name="region" Type="Int32" />
+    <Property Name="address_life" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="company" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="jobname" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="phone" Type="String" MaxLength="11" FixedLength="true" Unicode="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="photo" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <NavigationProperty Name="Region1" Relationship="Self.FK_Drivers_Region" FromRole="Drivers" ToRole="Region" />
+    <NavigationProperty Name="Fines" Relationship="Self.FK_Fines_Drivers" FromRole="Drivers" ToRole="Fines" />
+    <NavigationProperty Name="licences" Relationship="Self.FK_licences_Drivers" FromRole="Drivers" ToRole="licences" />
+    <NavigationProperty Name="vehides" Relationship="Self.FK_vehides_Drivers" FromRole="Drivers" ToRole="vehides" />
+  </EntityType>
+  <EntityType Name="Fines">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="status" Type="Int32" Nullable="false" />
+    <Property Name="driver_id" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Drivers" Relationship="Self.FK_Fines_Drivers" FromRole="Fines" ToRole="Drivers" />
+  </EntityType>
+  <EntityType Name="licences">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="licences_date" Type="DateTime" Precision="0" />
+    <Property Name="expire_date" Type="DateTime" Precision="0" />
+    <Property Name="categorios" Type="Int32" />
+    <Property Name="licences_series" Type="Int32" />
+    <Property Name="licences_number" Type="Int32" />
+    <Property Name="driver_id" Type="Int32" />
+    <NavigationProperty Name="Categorios1" Relationship="Self.FK_licences_Categorios" FromRole="licences" ToRole="Categorios" />
+    <NavigationProperty Name="Drivers" Relationship="Self.FK_licences_Drivers" FromRole="licences" ToRole="Drivers" />
+  </EntityType>
+  <EntityType Name="Region">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="index_region" Type="Int32" Nullable="false" />
+    <Property Name="name_region" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Drivers" Relationship="Self.FK_Drivers_Region" FromRole="Region" ToRole="Drivers" />
+  </EntityType>
+  <EntityType Name="Status">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="status_key" Type="Int32" />
+    <NavigationProperty Name="Users" Relationship="Self.FK_Users_Status" FromRole="Status" ToRole="Users" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Type_of_drive">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="vehides" Relationship="Self.FK_vehides_Type_of_drive" FromRole="Type_of_drive" ToRole="vehides" />
+  </EntityType>
+  <EntityType Name="Types_of_engine">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="vehides" Relationship="Self.FK_vehides_Types_of_engine" FromRole="Types_of_engine" ToRole="vehides" />
+  </EntityType>
+  <EntityType Name="Users">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_login" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="user_password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="status_id" Type="Int32" />
+    <NavigationProperty Name="Status" Relationship="Self.FK_Users_Status" FromRole="Users" ToRole="Status" />
+  </EntityType>
+  <EntityType Name="vehides">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VIN" Type="Int32" />
+    <Property Name="Manufacture" Type="Int32" />
+    <Property Name="Model" Type="Int32" />
+    <Property Name="Year" Type="Int32" />
+    <Property Name="Weight" Type="Int32" />
+    <Property Name="Color" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Engine_Type" Type="Int32" />
+    <Property Name="type_of_drive" Type="Int32" />
+    <Property Name="driver_id" Type="Int32" />
+    <NavigationProperty Name="Drivers" Relationship="Self.FK_vehides_Drivers" FromRole="vehides" ToRole="Drivers" />
+    <NavigationProperty Name="Type_of_drive1" Relationship="Self.FK_vehides_Type_of_drive" FromRole="vehides" ToRole="Type_of_drive" />
+    <NavigationProperty Name="Types_of_engine" Relationship="Self.FK_vehides_Types_of_engine" FromRole="vehides" ToRole="Types_of_engine" />
+  </EntityType>
+  <Association Name="FK_licences_Categorios">
+    <End Role="Categorios" Type="Self.Categorios" Multiplicity="0..1" />
+    <End Role="licences" Type="Self.licences" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Categorios">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="licences">
+        <PropertyRef Name="categorios" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Drivers_Region">
+    <End Role="Region" Type="Self.Region" Multiplicity="0..1" />
+    <End Role="Drivers" Type="Self.Drivers" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Region">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Drivers">
+        <PropertyRef Name="region" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Fines_Drivers">
+    <End Role="Drivers" Type="Self.Drivers" Multiplicity="1" />
+    <End Role="Fines" Type="Self.Fines" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Drivers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Fines">
+        <PropertyRef Name="driver_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_licences_Drivers">
+    <End Role="Drivers" Type="Self.Drivers" Multiplicity="0..1" />
+    <End Role="licences" Type="Self.licences" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Drivers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="licences">
+        <PropertyRef Name="driver_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_vehides_Drivers">
+    <End Role="Drivers" Type="Self.Drivers" Multiplicity="0..1" />
+    <End Role="vehides" Type="Self.vehides" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Drivers">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="vehides">
+        <PropertyRef Name="driver_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Users_Status">
+    <End Role="Status" Type="Self.Status" Multiplicity="0..1" />
+    <End Role="Users" Type="Self.Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Status">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Users">
+        <PropertyRef Name="status_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_vehides_Type_of_drive">
+    <End Role="Type_of_drive" Type="Self.Type_of_drive" Multiplicity="0..1" />
+    <End Role="vehides" Type="Self.vehides" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Type_of_drive">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="vehides">
+        <PropertyRef Name="type_of_drive" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_vehides_Types_of_engine">
+    <End Role="Types_of_engine" Type="Self.Types_of_engine" Multiplicity="0..1" />
+    <End Role="vehides" Type="Self.vehides" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Types_of_engine">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="vehides">
+        <PropertyRef Name="Engine_Type" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Entities6" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Categorios" EntityType="Self.Categorios" />
+    <EntitySet Name="Drivers" EntityType="Self.Drivers" />
+    <EntitySet Name="Fines" EntityType="Self.Fines" />
+    <EntitySet Name="licences" EntityType="Self.licences" />
+    <EntitySet Name="Region" EntityType="Self.Region" />
+    <EntitySet Name="Status" EntityType="Self.Status" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="Type_of_drive" EntityType="Self.Type_of_drive" />
+    <EntitySet Name="Types_of_engine" EntityType="Self.Types_of_engine" />
+    <EntitySet Name="Users" EntityType="Self.Users" />
+    <EntitySet Name="vehides" EntityType="Self.vehides" />
+    <AssociationSet Name="FK_licences_Categorios" Association="Self.FK_licences_Categorios">
+      <End Role="Categorios" EntitySet="Categorios" />
+      <End Role="licences" EntitySet="licences" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Drivers_Region" Association="Self.FK_Drivers_Region">
+      <End Role="Region" EntitySet="Region" />
+      <End Role="Drivers" EntitySet="Drivers" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Fines_Drivers" Association="Self.FK_Fines_Drivers">
+      <End Role="Drivers" EntitySet="Drivers" />
+      <End Role="Fines" EntitySet="Fines" />
+    </AssociationSet>
+    <AssociationSet Name="FK_licences_Drivers" Association="Self.FK_licences_Drivers">
+      <End Role="Drivers" EntitySet="Drivers" />
+      <End Role="licences" EntitySet="licences" />
+    </AssociationSet>
+    <AssociationSet Name="FK_vehides_Drivers" Association="Self.FK_vehides_Drivers">
+      <End Role="Drivers" EntitySet="Drivers" />
+      <End Role="vehides" EntitySet="vehides" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Users_Status" Association="Self.FK_Users_Status">
+      <End Role="Status" EntitySet="Status" />
+      <End Role="Users" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK_vehides_Type_of_drive" Association="Self.FK_vehides_Type_of_drive">
+      <End Role="Type_of_drive" EntitySet="Type_of_drive" />
+      <End Role="vehides" EntitySet="vehides" />
+    </AssociationSet>
+    <AssociationSet Name="FK_vehides_Types_of_engine" Association="Self.FK_vehides_Types_of_engine">
+      <End Role="Types_of_engine" EntitySet="Types_of_engine" />
+      <End Role="vehides" EntitySet="vehides" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

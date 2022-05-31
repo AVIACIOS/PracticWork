@@ -1,0 +1,126 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Хранилище ModelContainer" CdmEntityContainer="Entities6">
+    <EntitySetMapping Name="Categorios">
+      <EntityTypeMapping TypeName="Model.Categorios">
+        <MappingFragment StoreEntitySet="Categorios">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="categorios_name" ColumnName="categorios_name" />
+          <ScalarProperty Name="description" ColumnName="description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Drivers">
+      <EntityTypeMapping TypeName="Model.Drivers">
+        <MappingFragment StoreEntitySet="Drivers">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="firstname" ColumnName="firstname" />
+          <ScalarProperty Name="lastname" ColumnName="lastname" />
+          <ScalarProperty Name="middlename" ColumnName="middlename" />
+          <ScalarProperty Name="passport_serial" ColumnName="passport_serial" />
+          <ScalarProperty Name="passport_number" ColumnName="passport_number" />
+          <ScalarProperty Name="postcode" ColumnName="postcode" />
+          <ScalarProperty Name="region" ColumnName="region" />
+          <ScalarProperty Name="address_life" ColumnName="address_life" />
+          <ScalarProperty Name="company" ColumnName="company" />
+          <ScalarProperty Name="jobname" ColumnName="jobname" />
+          <ScalarProperty Name="phone" ColumnName="phone" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="photo" ColumnName="photo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Fines">
+      <EntityTypeMapping TypeName="Model.Fines">
+        <MappingFragment StoreEntitySet="Fines">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="driver_id" ColumnName="driver_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="licences">
+      <EntityTypeMapping TypeName="Model.licences">
+        <MappingFragment StoreEntitySet="licences">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="licences_date" ColumnName="licences_date" />
+          <ScalarProperty Name="expire_date" ColumnName="expire_date" />
+          <ScalarProperty Name="categorios" ColumnName="categorios" />
+          <ScalarProperty Name="licences_series" ColumnName="licences_series" />
+          <ScalarProperty Name="licences_number" ColumnName="licences_number" />
+          <ScalarProperty Name="driver_id" ColumnName="driver_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Region">
+      <EntityTypeMapping TypeName="Model.Region">
+        <MappingFragment StoreEntitySet="Region">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="index_region" ColumnName="index_region" />
+          <ScalarProperty Name="name_region" ColumnName="name_region" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Status">
+      <EntityTypeMapping TypeName="Model.Status">
+        <MappingFragment StoreEntitySet="Status">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="status_key" ColumnName="status_key" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="Model.sysdiagrams">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Type_of_drive">
+      <EntityTypeMapping TypeName="Model.Type_of_drive">
+        <MappingFragment StoreEntitySet="Type_of_drive">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Types_of_engine">
+      <EntityTypeMapping TypeName="Model.Types_of_engine">
+        <MappingFragment StoreEntitySet="Types_of_engine">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="Model.Users">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="user_login" ColumnName="user_login" />
+          <ScalarProperty Name="user_password" ColumnName="user_password" />
+          <ScalarProperty Name="status_id" ColumnName="status_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="vehides">
+      <EntityTypeMapping TypeName="Model.vehides">
+        <MappingFragment StoreEntitySet="vehides">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="VIN" ColumnName="VIN" />
+          <ScalarProperty Name="Manufacture" ColumnName="Manufacture" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Engine_Type" ColumnName="Engine_Type" />
+          <ScalarProperty Name="type_of_drive" ColumnName="type_of_drive" />
+          <ScalarProperty Name="driver_id" ColumnName="driver_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

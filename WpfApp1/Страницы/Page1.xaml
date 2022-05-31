@@ -1,0 +1,37 @@
+﻿<Page x:Class="WpfApp1.Page1"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp1"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Page1">
+
+    <Grid>
+        <DataGrid x:Name="gridDrivers" AutoGenerateColumns="False" Height="405" VerticalAlignment="Top" Margin="0,45,0,0">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Имя" Binding="{Binding firstname}" Width="100"></DataGridTextColumn>
+                <DataGridTextColumn Header="Фамилия" Binding="{Binding lastname}" Width="100"></DataGridTextColumn>
+                <DataGridTextColumn Header="Отчество" Binding="{Binding middlename}" Width="100"></DataGridTextColumn>
+                <DataGridTextColumn Header="Серия паспорта" Binding="{Binding passport_serial}" Width="100"></DataGridTextColumn>
+                <DataGridTextColumn Header="Номер паспорта" Binding="{Binding passport_number}" Width="100"></DataGridTextColumn>
+                <DataGridTextColumn Header="Индес" Binding="{Binding postcode}" Width="100"></DataGridTextColumn>
+                <DataGridTextColumn Header="Регион" Binding="{Binding region}" Width="100"></DataGridTextColumn>
+                <DataGridTextColumn Header="Адрес" Binding="{Binding address_life}" Width="100"></DataGridTextColumn>
+                <DataGridTextColumn Header="Место работы" Binding="{Binding company}" Width="100"></DataGridTextColumn>
+                <DataGridTextColumn Header="Должность" Binding="{Binding jobname}" Width="100"></DataGridTextColumn>
+                <DataGridTextColumn Header="Номер тел" Binding="{Binding phone}" Width="100"></DataGridTextColumn>
+                <DataGridTextColumn Header="Email" Binding="{Binding email}" Width="100"></DataGridTextColumn>
+                <DataGridTextColumn Header="Фото" Binding="{Binding photo}" Width="100"></DataGridTextColumn>
+            </DataGrid.Columns>
+
+        </DataGrid>
+
+        <Button Content="Добавление" Background="White" FontSize="20" HorizontalAlignment="Left" Margin="18,10,0,0" VerticalAlignment="Top" Width="140" Height="30" Click="Button_Click"/>
+        <Button Content="Удаление" Background="White" FontSize="20" HorizontalAlignment="Left" Margin="218,10,0,0" VerticalAlignment="Top" Width="140" Height="30" Click="Button_Click_1"/>
+
+        <Button Content="Изменить" Background="White" FontSize="20" HorizontalAlignment="Left" Margin="424,10,0,0" VerticalAlignment="Top" Width="140" Height="30"  Click="Button_Click_2" />
+
+    </Grid>
+</Page>
