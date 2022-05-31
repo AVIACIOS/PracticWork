@@ -14,7 +14,13 @@
         <Button x:Name="NextMarkButton" Content="NextMark" Background="White" FontSize="20" HorizontalAlignment="Left" Margin="478,0,0,0" VerticalAlignment="Top" Width="95" Height="30" Click="NextMarkButton_Click"/>
         <Button x:Name="GetCombinationsButton" Content="GetCombinations" Background="White" FontSize="20" HorizontalAlignment="Left" Margin="576,0,0,0" VerticalAlignment="Top" Width="161" Height="30" Click="GetCombinationsButton_Click"/>
         <Button x:Name="GetNextInRangeButton" Content="GetNextInRange" Background="White" FontSize="20" HorizontalAlignment="Left" Margin="742,0,0,0" VerticalAlignment="Top" Width="158" Height="30" Click="GetNextInRangeButton_Click"/>
-        <Frame x:Name="MainFrame" Content="Frame" Margin="-1,35,0,0" NavigationUIVisibility="Hidden"/>
+        <Frame x:Name="MainFrame" Content="Frame" Margin="-1,35,0,40" NavigationUIVisibility="Hidden"/>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Height="30" Margin="10,379,0,0" VerticalAlignment="Top" Width="411">
+            <StackPanel Orientation="Horizontal">
+                <TextBlock x:Name="txtName" Margin="0,0,20,0">Логин</TextBlock>
+                <TextBlock x:Name="txtStatus" Margin="0,0,20,0">Статус</TextBlock>
+            </StackPanel>
+        </StackPanel>
 
 
 

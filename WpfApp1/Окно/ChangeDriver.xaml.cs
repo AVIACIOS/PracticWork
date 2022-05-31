@@ -33,6 +33,7 @@ namespace WpfApp1.Окно
             cmbRegion.ItemsSource = en.Region.ToList();
             //imgphoto.Source = converter.ConvertFrom(drivers.photo) as ImageSource;
 
+            
 
             txtName.Text = drivers.firstname;
             txtSurname.Text = drivers.lastname;

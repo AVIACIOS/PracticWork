@@ -15,15 +15,13 @@ using System.Windows.Shapes;
 namespace WpfApp1.Окно
 {
     /// <summary>
-    /// Логика взаимодействия для ChangeVehides.xaml
+    /// Логика взаимодействия для PersonalRoom.xaml
     /// </summary>
-    public partial class ChangeVehides : Window
+    public partial class PersonalRoom : Window
     {
-        
-        public ChangeVehides()
+        public PersonalRoom()
         {
             InitializeComponent();
-            
         }
     }
 }

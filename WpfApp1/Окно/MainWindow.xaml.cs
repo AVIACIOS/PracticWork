@@ -16,15 +16,20 @@ using System.IO;
 
 namespace WpfApp1
 {
+    
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public Users currentuser = new Users();
+        public MainWindow(Users currentuser)
         {
             InitializeComponent();
+            txtName.Text += currentuser.user_login;
+            txtStatus.Text += currentuser.status_id;
             MainFrame.Navigate(new Page1());
+            this.currentuser = currentuser;
 
         }
 

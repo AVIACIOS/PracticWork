@@ -139,6 +139,12 @@
     <Compile Include="Окно\ChangeVehides.xaml.cs">
       <DependentUpon>ChangeVehides.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Окно\PersonalRoom.xaml.cs">
+      <DependentUpon>PersonalRoom.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Окно\Registration.xaml.cs">
+      <DependentUpon>Registration.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Страницы\Page3.xaml.cs">
       <DependentUpon>Page3.xaml</DependentUpon>
     </Compile>
@@ -176,6 +182,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Окно\ChangeVehides.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Окно\PersonalRoom.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Окно\Registration.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

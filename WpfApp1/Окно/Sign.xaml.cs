@@ -36,14 +36,21 @@ namespace WpfApp1
             }
             if(users.status_id == 1)
             {
+                Users currentuser = new Users();
                 this.Hide();
-                MainWindow main = new MainWindow();
+                MainWindow main = new MainWindow(currentuser);
                 main.ShowDialog();
                 this.Close();
             }
-            
-            
-            
+            //if (users.status_id == 3)
+            //{
+            //    this.Hide();
+            //    MainWindow main = new MainWindow();
+            //    main.ShowDialog();
+            //    this.Close();
+            //}
+
+
         }
     }
 }
