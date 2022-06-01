@@ -7,6 +7,31 @@
         mc:Ignorable="d"
         Title="ChangeVehides" Height="450" Width="800">
     <Grid>
-        
+        <StackPanel Orientation="Horizontal" Margin="10,10,404,10">
+            <Grid Width="300" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <TextBlock Text="VIN" Margin="10,10,120,10" />
+                <TextBlock Grid.Row="1" Text="VIN" Margin="10,10,120,10" />
+                <TextBlock Text="VIN" Grid.Row="2" Margin="10,10,120,10" />
+                <TextBlock Text="VIN" Grid.Row="3" Margin="10,10,120,10" />
+                <TextBlock Text="VIN" Grid.Row="4" Margin="10,10,120,10" />
+                <TextBlock Text="VIN" Grid.Row="5" Margin="10,10,120,10" />
+            </Grid>
+
+        </StackPanel>
     </Grid>
 </Window>
