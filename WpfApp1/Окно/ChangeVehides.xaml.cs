@@ -19,10 +19,15 @@ namespace WpfApp1.Окно
     /// </summary>
     public partial class ChangeVehides : Window
     {
+        Entities6 en = new Entities6();
         
         public ChangeVehides()
         {
+            
             InitializeComponent();
+
+
+            
             
         }
     }
